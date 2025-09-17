@@ -14,9 +14,13 @@ president_db_path = os.path.join(THIS_DIR, 'presidents.db')
 db_conn = sqlite3.connect(president_db_path)  # open relative to EXAMPLES
 db_cursor = db_conn.cursor()
 db_cursor.row_factory = sqlite3.Row  # set the row factory to be a Row object
+# import logging
+# @pytest.fixture
+# def alogger():
+#     logger = logging.....
+#     return logger
 
 @pytest.fixture
-
 def presidents():
     db_cursor.execute('select * from presidents')
     return db_cursor.fetchall()

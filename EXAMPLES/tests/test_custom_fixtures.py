@@ -13,9 +13,22 @@ def colors():
     return ['pink', 'orange', 'purple', 'green']
 
 @pytest.fixture
+def spam_a():
+    s = Spam('a')
+    return s
+
+@pytest.fixture
+def spam_b():
+    s = Spam('b')
+    return s  # is immutable...
+
+
+@pytest.fixture
 def before_after():
+    # fixture setup
     print("\n******* BEFORE! *******")
-    yield 100
+    yield 100   # actual fixture value
+    # fixture cleanup (teardown)
     print("\n******* AFTER! *******")
 
 def test_get_five_returns_five(spam):

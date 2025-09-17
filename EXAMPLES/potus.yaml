@@ -1,0 +1,22 @@
+- lastname: Washington
+  firstname: George
+  dob: 1732-02-22
+  dod: 1799-12-14
+  birthplace: Westmoreland County
+  birthstate: Virginia
+  term:
+  - 1789-04-30
+  - 1797-03-04
+  assassinated: false
+  party: null
+- lastname: Adams
+  firstname: John
+  dob: 1735-10-30
+  dod: 1826-07-04
+  birthplace: Braintree, Norfolk
+  birthstate: Massachusetts
+  term:
+  - 1797-03-04
+  - 1801-03-04
+  assassinated: false
+  party: Federalist
