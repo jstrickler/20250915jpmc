@@ -7,6 +7,10 @@ app = Flask(__name__)  # create Flask application object
 def index():  # define the view function
     return '<h1>Hello, Flask world!</h1>' # return HTML for the page to display
 
+@app.route('/colors')
+def colors():
+    return '<h1>red</h1><h1>blue</h1>'
+
 # app.register_route(index, '/')
 
 if __name__ == '__main__':

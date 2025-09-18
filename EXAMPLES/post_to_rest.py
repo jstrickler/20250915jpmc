@@ -10,6 +10,7 @@ for i in range(3):
         data={'date': datetime.now(),
             'label': 'test_' + str(i)
         },
+        # json={....}
         cookies={'python': 'testing'},
         headers={'X-Python': 'Guido van Rossum'},
     )

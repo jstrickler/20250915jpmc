@@ -26,7 +26,7 @@ def pres_to_dict(president):
 
 def get_presidents():
     presidents = []
-    for i in range(1, 46):
+    for i in range(1, 48):
         presidents.append(President(i))
     return presidents
 

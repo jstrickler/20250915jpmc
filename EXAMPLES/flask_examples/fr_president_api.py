@@ -116,11 +116,11 @@ class PresidentsList(Resource):
         )
 
         session.add(p)
-        session.commit()
+        session.commit()  # write data to table
 
         return args, 201
 
-api.add_resource(PresidentsList, '/api/presidents')
+api.add_resource(PresidentsList, '/api/president')
 api.add_resource(Presidents, '/api/president/<int:termnum>')
 
 if __name__ == '__main__':

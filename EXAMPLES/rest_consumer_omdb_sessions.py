@@ -23,12 +23,13 @@ def main():
             params = {'t': movie_title}
             response = session.get(OMDB_URL, params=params)
             if response.status_code == requests.codes.OK:
-                raw_data = response.json()
-                print(f"raw_data['Title']: {raw_data['Title']}")
-                print(f"raw_data['Director']: {raw_data['Director']}")
-                print(f"raw_data['Year']: {raw_data['Year']}")
-                print(f"raw_data['Runtime']: {raw_data['Runtime']}")
-                print()
+                if 'json' in response.headers['content-type']:
+                    raw_data = response.json()
+                    print(f"raw_data['Title']: {raw_data['Title']}")
+                    print(f"raw_data['Director']: {raw_data['Director']}")
+                    print(f"raw_data['Year']: {raw_data['Year']}")
+                    print(f"raw_data['Runtime']: {raw_data['Runtime']}")
+                    print()
 
 
 
