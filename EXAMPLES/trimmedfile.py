@@ -2,7 +2,7 @@ class TrimmedFile:
     def __init__(self, file_name):  # constructor is passed file name
         self._file_in = open(file_name)
 
-    def __iter__(self):  
+    def __iter__(self):  # this makes the class an ITERATOR
         # An iterator must implement iter(), which must return an iterator. 
         # Typically it returns 'self', as the generator IS the iterator
         return self
@@ -18,5 +18,8 @@ class TrimmedFile:
 if __name__ == '__main__':
     # To use the iterator, create an instance and iterate over it.
     trimmed = TrimmedFile('../DATA/mary.txt')  
+    print(f"{hasattr(trimmed, '__iter__') = }")
+    print(f"{next(trimmed) = }")
+    
     for line in trimmed:
         print(line)
